@@ -1,5 +1,3 @@
-Здесь был Вася
-
 # Traffic lights control with KasperskyOS
 
 English version will be available later below
