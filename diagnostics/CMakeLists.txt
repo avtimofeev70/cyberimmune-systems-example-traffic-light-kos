@@ -7,4 +7,4 @@ include (platform/nk)
 project_header_default ("STANDARD_GNU_11:YES" "STRICT_WARNINGS:NO")
 
 add_executable (Diagnostics "src/diagnostics.c")
-add_dependencies (Diagnostics traffic_light_diagnostics_edl_files)
+add_dependencies (Diagnostics traffic_light_idl_files traffic_light_diagnostics_edl_files)

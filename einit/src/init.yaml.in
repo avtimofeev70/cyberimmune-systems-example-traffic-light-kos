@@ -7,10 +7,14 @@ entities:
     id: lights_gpio_connection
 @INIT_ControlSystem_ENTITY_CONNECTIONS@
 
+# The `LightsGPIO` entity can only respond to requests.
+- name: traffic_light.LightsGPIO
+  connections:
+  - target: traffic_light.Diagnostics
+    id: diagnostics_connection
+@INIT_LightsGPIO_ENTITY_CONNECTIONS@
+
 # The `Diagnostics` entity can only respond to requests.
 - name: traffic_light.Diagnostics
 @INIT_Diagnostics_ENTITY_CONNECTIONS@
 
-# The `LightsGPIO` entity can only respond to requests.
-- name: traffic_light.LightsGPIO
-@INIT_LightsGPIO_ENTITY_CONNECTIONS@
