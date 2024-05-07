@@ -1,0 +1,556 @@
+{
+    "cdls": {
+        "/home/vboxuser/Documents/Day_2/cyberimmune-systems-example-traffic-light-kos/build/_headers_/traffic_light/ControlSystem.edl": {
+            "deps": {
+                "cdlDeps": [],
+                "idlDeps": []
+            },
+            "found": "/home/vboxuser/Documents/Day_2/cyberimmune-systems-example-traffic-light-kos/build/_headers_/traffic_light/ControlSystem.edl",
+            "parent": "security.psl"
+        },
+        "/home/vboxuser/Documents/Day_2/cyberimmune-systems-example-traffic-light-kos/build/_headers_/traffic_light/Diagnostics.edl": {
+            "deps": {
+                "cdlDeps": [],
+                "idlDeps": []
+            },
+            "found": "/home/vboxuser/Documents/Day_2/cyberimmune-systems-example-traffic-light-kos/build/_headers_/traffic_light/Diagnostics.edl",
+            "parent": "security.psl"
+        },
+        "/home/vboxuser/Documents/Day_2/cyberimmune-systems-example-traffic-light-kos/build/_headers_/traffic_light/LightsGPIO.edl": {
+            "deps": {
+                "cdlDeps": [
+                    "traffic_light/CMode.cdl"
+                ],
+                "idlDeps": []
+            },
+            "found": "/home/vboxuser/Documents/Day_2/cyberimmune-systems-example-traffic-light-kos/build/_headers_/traffic_light/LightsGPIO.edl",
+            "parent": "security.psl"
+        },
+        "/home/vboxuser/Documents/Day_2/cyberimmune-systems-example-traffic-light-kos/build/einit/EinitQemu-kss/Einit.edl": {
+            "deps": {
+                "cdlDeps": [],
+                "idlDeps": []
+            },
+            "found": "/home/vboxuser/Documents/Day_2/cyberimmune-systems-example-traffic-light-kos/build/einit/EinitQemu-kss/Einit.edl",
+            "parent": "security.psl"
+        },
+        "/opt/KasperskyOS-Community-Edition-1.1.1.40/sysroot-aarch64-kos/include/kl/core/Core.edl": {
+            "deps": {
+                "cdlDeps": [
+                    "kl/core/Audit.cdl",
+                    "kl/core/CM.cdl",
+                    "kl/core/FS.cdl",
+                    "kl/core/HAL.cdl",
+                    "kl/core/Handle.cdl",
+                    "kl/core/IO.cdl",
+                    "kl/core/IOMMU.cdl",
+                    "kl/core/IPC.cdl",
+                    "kl/core/Notice.cdl",
+                    "kl/core/PM.cdl",
+                    "kl/core/Profiler.cdl",
+                    "kl/core/Sync.cdl",
+                    "kl/core/Task.cdl",
+                    "kl/core/Thread.cdl",
+                    "kl/core/Time.cdl",
+                    "kl/core/VMM.cdl",
+                    "kl/core/XHCIDBG.cdl"
+                ],
+                "idlDeps": []
+            },
+            "found": "/opt/KasperskyOS-Community-Edition-1.1.1.40/sysroot-aarch64-kos/include/kl/core/Core.edl",
+            "parent": "security.psl"
+        },
+        "kl/core/Audit.cdl": {
+            "deps": {
+                "cdlDeps": [],
+                "idlDeps": [
+                    "kl/core/Audit.idl"
+                ]
+            },
+            "found": "/opt/KasperskyOS-Community-Edition-1.1.1.40/sysroot-aarch64-kos/include/kl/core/Audit.cdl",
+            "parent": "/opt/KasperskyOS-Community-Edition-1.1.1.40/sysroot-aarch64-kos/include/kl/core/Core.edl"
+        },
+        "kl/core/CM.cdl": {
+            "deps": {
+                "cdlDeps": [],
+                "idlDeps": [
+                    "kl/core/CM.idl"
+                ]
+            },
+            "found": "/opt/KasperskyOS-Community-Edition-1.1.1.40/sysroot-aarch64-kos/include/kl/core/CM.cdl",
+            "parent": "/opt/KasperskyOS-Community-Edition-1.1.1.40/sysroot-aarch64-kos/include/kl/core/Core.edl"
+        },
+        "kl/core/FS.cdl": {
+            "deps": {
+                "cdlDeps": [],
+                "idlDeps": [
+                    "kl/core/FS.idl",
+                    "kl/core/FSUnsafe.idl"
+                ]
+            },
+            "found": "/opt/KasperskyOS-Community-Edition-1.1.1.40/sysroot-aarch64-kos/include/kl/core/FS.cdl",
+            "parent": "/opt/KasperskyOS-Community-Edition-1.1.1.40/sysroot-aarch64-kos/include/kl/core/Core.edl"
+        },
+        "kl/core/HAL.cdl": {
+            "deps": {
+                "cdlDeps": [],
+                "idlDeps": [
+                    "kl/core/HAL.idl"
+                ]
+            },
+            "found": "/opt/KasperskyOS-Community-Edition-1.1.1.40/sysroot-aarch64-kos/include/kl/core/HAL.cdl",
+            "parent": "/opt/KasperskyOS-Community-Edition-1.1.1.40/sysroot-aarch64-kos/include/kl/core/Core.edl"
+        },
+        "kl/core/Handle.cdl": {
+            "deps": {
+                "cdlDeps": [],
+                "idlDeps": [
+                    "kl/core/Handle.idl"
+                ]
+            },
+            "found": "/opt/KasperskyOS-Community-Edition-1.1.1.40/sysroot-aarch64-kos/include/kl/core/Handle.cdl",
+            "parent": "/opt/KasperskyOS-Community-Edition-1.1.1.40/sysroot-aarch64-kos/include/kl/core/Core.edl"
+        },
+        "kl/core/IO.cdl": {
+            "deps": {
+                "cdlDeps": [],
+                "idlDeps": [
+                    "kl/core/IO.idl"
+                ]
+            },
+            "found": "/opt/KasperskyOS-Community-Edition-1.1.1.40/sysroot-aarch64-kos/include/kl/core/IO.cdl",
+            "parent": "/opt/KasperskyOS-Community-Edition-1.1.1.40/sysroot-aarch64-kos/include/kl/core/Core.edl"
+        },
+        "kl/core/IOMMU.cdl": {
+            "deps": {
+                "cdlDeps": [],
+                "idlDeps": [
+                    "kl/core/IOMMU.idl"
+                ]
+            },
+            "found": "/opt/KasperskyOS-Community-Edition-1.1.1.40/sysroot-aarch64-kos/include/kl/core/IOMMU.cdl",
+            "parent": "/opt/KasperskyOS-Community-Edition-1.1.1.40/sysroot-aarch64-kos/include/kl/core/Core.edl"
+        },
+        "kl/core/IPC.cdl": {
+            "deps": {
+                "cdlDeps": [],
+                "idlDeps": [
+                    "kl/core/IPC.idl"
+                ]
+            },
+            "found": "/opt/KasperskyOS-Community-Edition-1.1.1.40/sysroot-aarch64-kos/include/kl/core/IPC.cdl",
+            "parent": "/opt/KasperskyOS-Community-Edition-1.1.1.40/sysroot-aarch64-kos/include/kl/core/Core.edl"
+        },
+        "kl/core/Notice.cdl": {
+            "deps": {
+                "cdlDeps": [],
+                "idlDeps": [
+                    "kl/core/Notice.idl"
+                ]
+            },
+            "found": "/opt/KasperskyOS-Community-Edition-1.1.1.40/sysroot-aarch64-kos/include/kl/core/Notice.cdl",
+            "parent": "/opt/KasperskyOS-Community-Edition-1.1.1.40/sysroot-aarch64-kos/include/kl/core/Core.edl"
+        },
+        "kl/core/PM.cdl": {
+            "deps": {
+                "cdlDeps": [],
+                "idlDeps": [
+                    "kl/core/PM.idl"
+                ]
+            },
+            "found": "/opt/KasperskyOS-Community-Edition-1.1.1.40/sysroot-aarch64-kos/include/kl/core/PM.cdl",
+            "parent": "/opt/KasperskyOS-Community-Edition-1.1.1.40/sysroot-aarch64-kos/include/kl/core/Core.edl"
+        },
+        "kl/core/Profiler.cdl": {
+            "deps": {
+                "cdlDeps": [],
+                "idlDeps": [
+                    "kl/core/Profiler.idl"
+                ]
+            },
+            "found": "/opt/KasperskyOS-Community-Edition-1.1.1.40/sysroot-aarch64-kos/include/kl/core/Profiler.cdl",
+            "parent": "/opt/KasperskyOS-Community-Edition-1.1.1.40/sysroot-aarch64-kos/include/kl/core/Core.edl"
+        },
+        "kl/core/Sync.cdl": {
+            "deps": {
+                "cdlDeps": [],
+                "idlDeps": [
+                    "kl/core/Sync.idl"
+                ]
+            },
+            "found": "/opt/KasperskyOS-Community-Edition-1.1.1.40/sysroot-aarch64-kos/include/kl/core/Sync.cdl",
+            "parent": "/opt/KasperskyOS-Community-Edition-1.1.1.40/sysroot-aarch64-kos/include/kl/core/Core.edl"
+        },
+        "kl/core/Task.cdl": {
+            "deps": {
+                "cdlDeps": [],
+                "idlDeps": [
+                    "kl/core/Task.idl"
+                ]
+            },
+            "found": "/opt/KasperskyOS-Community-Edition-1.1.1.40/sysroot-aarch64-kos/include/kl/core/Task.cdl",
+            "parent": "/opt/KasperskyOS-Community-Edition-1.1.1.40/sysroot-aarch64-kos/include/kl/core/Core.edl"
+        },
+        "kl/core/Thread.cdl": {
+            "deps": {
+                "cdlDeps": [],
+                "idlDeps": [
+                    "kl/core/Thread.idl"
+                ]
+            },
+            "found": "/opt/KasperskyOS-Community-Edition-1.1.1.40/sysroot-aarch64-kos/include/kl/core/Thread.cdl",
+            "parent": "/opt/KasperskyOS-Community-Edition-1.1.1.40/sysroot-aarch64-kos/include/kl/core/Core.edl"
+        },
+        "kl/core/Time.cdl": {
+            "deps": {
+                "cdlDeps": [],
+                "idlDeps": [
+                    "kl/core/Time.idl"
+                ]
+            },
+            "found": "/opt/KasperskyOS-Community-Edition-1.1.1.40/sysroot-aarch64-kos/include/kl/core/Time.cdl",
+            "parent": "/opt/KasperskyOS-Community-Edition-1.1.1.40/sysroot-aarch64-kos/include/kl/core/Core.edl"
+        },
+        "kl/core/VMM.cdl": {
+            "deps": {
+                "cdlDeps": [],
+                "idlDeps": [
+                    "kl/core/VMM.idl"
+                ]
+            },
+            "found": "/opt/KasperskyOS-Community-Edition-1.1.1.40/sysroot-aarch64-kos/include/kl/core/VMM.cdl",
+            "parent": "/opt/KasperskyOS-Community-Edition-1.1.1.40/sysroot-aarch64-kos/include/kl/core/Core.edl"
+        },
+        "kl/core/XHCIDBG.cdl": {
+            "deps": {
+                "cdlDeps": [],
+                "idlDeps": [
+                    "kl/core/XHCIDBG.idl"
+                ]
+            },
+            "found": "/opt/KasperskyOS-Community-Edition-1.1.1.40/sysroot-aarch64-kos/include/kl/core/XHCIDBG.cdl",
+            "parent": "/opt/KasperskyOS-Community-Edition-1.1.1.40/sysroot-aarch64-kos/include/kl/core/Core.edl"
+        },
+        "traffic_light/CMode.cdl": {
+            "deps": {
+                "cdlDeps": [],
+                "idlDeps": [
+                    "traffic_light/IMode.idl"
+                ]
+            },
+            "found": "/home/vboxuser/Documents/Day_2/cyberimmune-systems-example-traffic-light-kos/build/_headers_/traffic_light/CMode.cdl",
+            "parent": "/home/vboxuser/Documents/Day_2/cyberimmune-systems-example-traffic-light-kos/build/_headers_/traffic_light/LightsGPIO.edl"
+        }
+    },
+    "edls": {
+        "/home/vboxuser/Documents/Day_2/cyberimmune-systems-example-traffic-light-kos/build/_headers_/traffic_light/ControlSystem.edl": {
+            "deps": {
+                "cdlDeps": [],
+                "idlDeps": []
+            },
+            "found": "/home/vboxuser/Documents/Day_2/cyberimmune-systems-example-traffic-light-kos/build/_headers_/traffic_light/ControlSystem.edl",
+            "parent": "security.psl"
+        },
+        "/home/vboxuser/Documents/Day_2/cyberimmune-systems-example-traffic-light-kos/build/_headers_/traffic_light/Diagnostics.edl": {
+            "deps": {
+                "cdlDeps": [],
+                "idlDeps": []
+            },
+            "found": "/home/vboxuser/Documents/Day_2/cyberimmune-systems-example-traffic-light-kos/build/_headers_/traffic_light/Diagnostics.edl",
+            "parent": "security.psl"
+        },
+        "/home/vboxuser/Documents/Day_2/cyberimmune-systems-example-traffic-light-kos/build/_headers_/traffic_light/LightsGPIO.edl": {
+            "deps": {
+                "cdlDeps": [
+                    "traffic_light/CMode.cdl"
+                ],
+                "idlDeps": []
+            },
+            "found": "/home/vboxuser/Documents/Day_2/cyberimmune-systems-example-traffic-light-kos/build/_headers_/traffic_light/LightsGPIO.edl",
+            "parent": "security.psl"
+        },
+        "/home/vboxuser/Documents/Day_2/cyberimmune-systems-example-traffic-light-kos/build/einit/EinitQemu-kss/Einit.edl": {
+            "deps": {
+                "cdlDeps": [],
+                "idlDeps": []
+            },
+            "found": "/home/vboxuser/Documents/Day_2/cyberimmune-systems-example-traffic-light-kos/build/einit/EinitQemu-kss/Einit.edl",
+            "parent": "security.psl"
+        },
+        "/opt/KasperskyOS-Community-Edition-1.1.1.40/sysroot-aarch64-kos/include/kl/core/Core.edl": {
+            "deps": {
+                "cdlDeps": [
+                    "kl/core/Audit.cdl",
+                    "kl/core/CM.cdl",
+                    "kl/core/FS.cdl",
+                    "kl/core/HAL.cdl",
+                    "kl/core/Handle.cdl",
+                    "kl/core/IO.cdl",
+                    "kl/core/IOMMU.cdl",
+                    "kl/core/IPC.cdl",
+                    "kl/core/Notice.cdl",
+                    "kl/core/PM.cdl",
+                    "kl/core/Profiler.cdl",
+                    "kl/core/Sync.cdl",
+                    "kl/core/Task.cdl",
+                    "kl/core/Thread.cdl",
+                    "kl/core/Time.cdl",
+                    "kl/core/VMM.cdl",
+                    "kl/core/XHCIDBG.cdl"
+                ],
+                "idlDeps": []
+            },
+            "found": "/opt/KasperskyOS-Community-Edition-1.1.1.40/sysroot-aarch64-kos/include/kl/core/Core.edl",
+            "parent": "security.psl"
+        }
+    },
+    "idls": {
+        "kl/core/Audit.idl": {
+            "deps": {
+                "idlDeps": [
+                    "kl/core/Types.idl"
+                ]
+            },
+            "found": "/opt/KasperskyOS-Community-Edition-1.1.1.40/sysroot-aarch64-kos/include/kl/core/Audit.idl",
+            "parent": "kl/core/Audit.cdl"
+        },
+        "kl/core/CM.idl": {
+            "deps": {
+                "idlDeps": [
+                    "kl/core/Types.idl"
+                ]
+            },
+            "found": "/opt/KasperskyOS-Community-Edition-1.1.1.40/sysroot-aarch64-kos/include/kl/core/CM.idl",
+            "parent": "kl/core/CM.cdl"
+        },
+        "kl/core/Execute.idl": {
+            "deps": {
+                "idlDeps": [
+                    "kl/core/Types.idl"
+                ]
+            },
+            "found": "/opt/KasperskyOS-Community-Edition-1.1.1.40/sysroot-aarch64-kos/include/kl/core/Execute.idl",
+            "parent": "security.psl"
+        },
+        "kl/core/FS.idl": {
+            "deps": {
+                "idlDeps": [
+                    "kl/core/Types.idl"
+                ]
+            },
+            "found": "/opt/KasperskyOS-Community-Edition-1.1.1.40/sysroot-aarch64-kos/include/kl/core/FS.idl",
+            "parent": "kl/core/FS.cdl"
+        },
+        "kl/core/FSUnsafe.idl": {
+            "deps": {
+                "idlDeps": [
+                    "kl/core/Types.idl"
+                ]
+            },
+            "found": "/opt/KasperskyOS-Community-Edition-1.1.1.40/sysroot-aarch64-kos/include/kl/core/FSUnsafe.idl",
+            "parent": "kl/core/FS.cdl"
+        },
+        "kl/core/HAL.idl": {
+            "deps": {
+                "idlDeps": [
+                    "kl/core/Types.idl"
+                ]
+            },
+            "found": "/opt/KasperskyOS-Community-Edition-1.1.1.40/sysroot-aarch64-kos/include/kl/core/HAL.idl",
+            "parent": "kl/core/HAL.cdl"
+        },
+        "kl/core/Handle.idl": {
+            "deps": {
+                "idlDeps": [
+                    "kl/core/Notice.idl",
+                    "kl/core/Types.idl"
+                ]
+            },
+            "found": "/opt/KasperskyOS-Community-Edition-1.1.1.40/sysroot-aarch64-kos/include/kl/core/Handle.idl",
+            "parent": "kl/core/Handle.cdl"
+        },
+        "kl/core/IO.idl": {
+            "deps": {
+                "idlDeps": [
+                    "kl/core/Types.idl"
+                ]
+            },
+            "found": "/opt/KasperskyOS-Community-Edition-1.1.1.40/sysroot-aarch64-kos/include/kl/core/IO.idl",
+            "parent": "kl/core/IO.cdl"
+        },
+        "kl/core/IOMMU.idl": {
+            "deps": {
+                "idlDeps": [
+                    "kl/core/Types.idl"
+                ]
+            },
+            "found": "/opt/KasperskyOS-Community-Edition-1.1.1.40/sysroot-aarch64-kos/include/kl/core/IOMMU.idl",
+            "parent": "kl/core/IOMMU.cdl"
+        },
+        "kl/core/IPC.idl": {
+            "deps": {
+                "idlDeps": [
+                    "kl/core/Types.idl"
+                ]
+            },
+            "found": "/opt/KasperskyOS-Community-Edition-1.1.1.40/sysroot-aarch64-kos/include/kl/core/IPC.idl",
+            "parent": "kl/core/IPC.cdl"
+        },
+        "kl/core/Notice.idl": {
+            "deps": {
+                "idlDeps": [
+                    "kl/core/Types.idl"
+                ]
+            },
+            "found": "/opt/KasperskyOS-Community-Edition-1.1.1.40/sysroot-aarch64-kos/include/kl/core/Notice.idl",
+            "parent": "kl/core/Notice.cdl"
+        },
+        "kl/core/PM.idl": {
+            "deps": {
+                "idlDeps": [
+                    "kl/core/Types.idl"
+                ]
+            },
+            "found": "/opt/KasperskyOS-Community-Edition-1.1.1.40/sysroot-aarch64-kos/include/kl/core/PM.idl",
+            "parent": "kl/core/PM.cdl"
+        },
+        "kl/core/Profiler.idl": {
+            "deps": {
+                "idlDeps": [
+                    "kl/core/Thread.idl",
+                    "kl/core/Types.idl"
+                ]
+            },
+            "found": "/opt/KasperskyOS-Community-Edition-1.1.1.40/sysroot-aarch64-kos/include/kl/core/Profiler.idl",
+            "parent": "kl/core/Profiler.cdl"
+        },
+        "kl/core/Sync.idl": {
+            "deps": {
+                "idlDeps": [
+                    "kl/core/Types.idl"
+                ]
+            },
+            "found": "/opt/KasperskyOS-Community-Edition-1.1.1.40/sysroot-aarch64-kos/include/kl/core/Sync.idl",
+            "parent": "kl/core/Sync.cdl"
+        },
+        "kl/core/Task.idl": {
+            "deps": {
+                "idlDeps": [
+                    "kl/core/Types.idl"
+                ]
+            },
+            "found": "/opt/KasperskyOS-Community-Edition-1.1.1.40/sysroot-aarch64-kos/include/kl/core/Task.idl",
+            "parent": "kl/core/Task.cdl"
+        },
+        "kl/core/Thread.idl": {
+            "deps": {
+                "idlDeps": [
+                    "kl/core/Types.idl"
+                ]
+            },
+            "found": "/opt/KasperskyOS-Community-Edition-1.1.1.40/sysroot-aarch64-kos/include/kl/core/Thread.idl",
+            "parent": "kl/core/Thread.cdl"
+        },
+        "kl/core/Time.idl": {
+            "deps": {
+                "idlDeps": [
+                    "kl/core/Types.idl"
+                ]
+            },
+            "found": "/opt/KasperskyOS-Community-Edition-1.1.1.40/sysroot-aarch64-kos/include/kl/core/Time.idl",
+            "parent": "kl/core/Time.cdl"
+        },
+        "kl/core/Types.idl": {
+            "deps": {
+                "idlDeps": []
+            },
+            "found": "/opt/KasperskyOS-Community-Edition-1.1.1.40/sysroot-aarch64-kos/include/kl/core/Types.idl",
+            "parent": "kl/core/XHCIDBG.idl"
+        },
+        "kl/core/VMM.idl": {
+            "deps": {
+                "idlDeps": [
+                    "kl/core/Types.idl"
+                ]
+            },
+            "found": "/opt/KasperskyOS-Community-Edition-1.1.1.40/sysroot-aarch64-kos/include/kl/core/VMM.idl",
+            "parent": "kl/core/VMM.cdl"
+        },
+        "kl/core/XHCIDBG.idl": {
+            "deps": {
+                "idlDeps": [
+                    "kl/core/Types.idl"
+                ]
+            },
+            "found": "/opt/KasperskyOS-Community-Edition-1.1.1.40/sysroot-aarch64-kos/include/kl/core/XHCIDBG.idl",
+            "parent": "kl/core/XHCIDBG.cdl"
+        },
+        "traffic_light/IMode.idl": {
+            "deps": {
+                "idlDeps": []
+            },
+            "found": "/home/vboxuser/Documents/Day_2/cyberimmune-systems-example-traffic-light-kos/build/_headers_/traffic_light/IMode.idl",
+            "parent": "traffic_light/CMode.cdl"
+        }
+    },
+    "platform": [
+        "system.platform",
+        {
+            "deps": [],
+            "found": "/opt/KasperskyOS-Community-Edition-1.1.1.40/sysroot-aarch64-kos/include/system.platform",
+            "parent": null
+        }
+    ],
+    "psls": {
+        "nk/base.psl": {
+            "deps": {
+                "cdlDeps": [],
+                "edlDeps": [],
+                "idlDeps": [],
+                "pslDeps": [],
+                "pslProviders": [
+                    "base"
+                ]
+            },
+            "found": "/opt/KasperskyOS-Community-Edition-1.1.1.40/toolchain/include/nk/base.psl",
+            "parent": "security.psl"
+        },
+        "nk/basic.psl": {
+            "deps": {
+                "cdlDeps": [],
+                "edlDeps": [],
+                "idlDeps": [],
+                "pslDeps": [
+                    "nk/base.psl"
+                ],
+                "pslProviders": [
+                    "basic"
+                ]
+            },
+            "found": "/opt/KasperskyOS-Community-Edition-1.1.1.40/toolchain/include/nk/basic.psl",
+            "parent": "security.psl"
+        },
+        "security.psl": {
+            "deps": {
+                "cdlDeps": [],
+                "edlDeps": [
+                    "/home/vboxuser/Documents/Day_2/cyberimmune-systems-example-traffic-light-kos/build/_headers_/traffic_light/ControlSystem.edl",
+                    "/home/vboxuser/Documents/Day_2/cyberimmune-systems-example-traffic-light-kos/build/_headers_/traffic_light/Diagnostics.edl",
+                    "/home/vboxuser/Documents/Day_2/cyberimmune-systems-example-traffic-light-kos/build/_headers_/traffic_light/LightsGPIO.edl",
+                    "/home/vboxuser/Documents/Day_2/cyberimmune-systems-example-traffic-light-kos/build/einit/EinitQemu-kss/Einit.edl",
+                    "/opt/KasperskyOS-Community-Edition-1.1.1.40/sysroot-aarch64-kos/include/kl/core/Core.edl"
+                ],
+                "idlDeps": [
+                    "kl/core/Execute.idl"
+                ],
+                "pslDeps": [
+                    "nk/base.psl",
+                    "nk/basic.psl"
+                ],
+                "pslProviders": []
+            },
+            "found": "/home/vboxuser/Documents/Day_2/cyberimmune-systems-example-traffic-light-kos/build/einit/EinitQemu-kss/src/security.psl",
+            "parent": null
+        }
+    }
+}

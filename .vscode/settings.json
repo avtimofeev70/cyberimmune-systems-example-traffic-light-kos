@@ -1,4 +1,7 @@
 {
     "sonarlint.pathToCompileCommands": "${workspaceFolder}/build/compile_commands.json",
-    "cmake.configureOnOpen": false
+    "cmake.configureOnOpen": false,
+    "files.associations": {
+        "diagnosticsmessage.idl.h": "c"
+    }
 }

@@ -1,0 +1,5 @@
+entity traffic_light.LightsGPIO
+
+components {
+    lightsGpio : traffic_light.CMode
+}

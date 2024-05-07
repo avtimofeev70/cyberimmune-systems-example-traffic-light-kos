@@ -1,0 +1,19 @@
+/* Package with an "IMode" interface declaration. */
+
+package traffic_light.IMode
+
+const UInt32 Direction1Red          = 1;
+const UInt32 Direction1Yellow       = 2;
+const UInt32 Direction1Green        = 4;
+const UInt32 Direction1Blink        = 8;
+
+const UInt32 Direction2Red          = 0x100;
+const UInt32 Direction2Yellow       = 0x200;
+const UInt32 Direction2Green        = 0x400;
+const UInt32 Direction2Blink        = 0x800;
+
+
+interface {
+    /* IMode interface method */
+    FMode(in UInt32 value, out UInt32 result);
+}
