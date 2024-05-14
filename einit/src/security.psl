@@ -16,6 +16,8 @@ use EDL traffic_light.ControlSystem
 use EDL traffic_light.LightsGPIO
 use EDL traffic_light.Diagnostics
 
+use audit_policy._
+
 /* Execution of entities allowed. */
 execute {
     grant ()
@@ -35,6 +37,7 @@ request src=traffic_light.Diagnostics dst=kl.core.Core {
     grant ()
 }
 
+/*
 request src = traffic_light.LightsGPIO, dst = traffic_light.Diagnostics
 {
     match interface = traffic_light.DiagnosticsMessage, method = SendDiagnosticsMessage { grant () }
@@ -44,7 +47,7 @@ response src = traffic_light.Diagnostics, dst = traffic_light.LightsGPIO
 {
     match interface = traffic_light.DiagnosticsMessage, method = SendDiagnosticsMessage { grant () }
 }
-
+*/
 
 /* запрет комбинации двух зеленых без моргания */
 request src=traffic_light.ControlSystem 
@@ -151,57 +154,3 @@ security {
     grant ()
 }
 
-policy object audit_trace : Base {}
-
-request src=traffic_light.LightsGPIO,
-    dst=traffic_light.Diagnostics,
-    endpoint=diagnostics.report,
-    method=report {
-        audit_trace.grant()
-}
-
-response src=traffic_light.Diagnostics,
-    endpoint=diagnostics.report,
-    dst=traffic_light.LightsGPIO
-    method=report {
-        audit_trace.grant()
-}
-
-// We declare the profile for audit.
-audit profile trace = {
-    // Complete silence.
-    0: {},
-    // Only denied by kss.
-    1: {
-        base: {
-            kss: [ "denied" ]
-        },
-    },
-    // Only denied from everyone.
-    2: {
-        base: {
-            kss: [ "denied" ]
-        },
-        audit_trace: {
-            kss: [ "denied" ]
-        }
-    },
-    // All listening.
-    3: {
-        base: {
-            kss: [ "granted", "denied" ]
-        },
-        audit_trace: {
-            kss: [ "granted", "denied" ]
-        },
-    },
-    // audit_trace messages only
-    4: {
-        base: { kss: [] },
-        audit_trace: {
-            kss: [ "granted", "denied" ]
-        },
-    },
-}
-// We assign the level of the audit profile used by default.
-audit default = trace 4

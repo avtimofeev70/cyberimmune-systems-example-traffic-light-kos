@@ -1,0 +1,80 @@
+use EDL traffic_light.KlogEntity
+use EDL traffic_light.KlogStorageEntity
+
+request src=traffic_light.KlogEntity dst=traffic_light.KlogStorageEntity interface=kl.KlogStorage method=write { grant () }
+response src=traffic_light.KlogStorageEntity dst=traffic_light.KlogEntity interface=kl.KlogStorage method=write { grant () }
+
+request src=traffic_light.KlogEntity, dst=kl.core.Core {
+    // Interface to the Synchronization service.
+    match interface=kl.core.Sync { grant () }
+    // Interface to the Virtual Memory Manager (VMM) service.
+    match interface=kl.core.VMM { grant () }
+    // Interface to the Thread service.
+    match interface=kl.core.Thread { grant () }
+    // Interface to the Hal service.
+    match interface=kl.core.HAL, method=DebugWrite { grant () }
+    match interface=kl.core.HAL, method=GetEnv { grant () }
+    // Interface to the HandleManager service.
+    match interface=kl.core.Handle { grant () }
+    // Audit interface of the Vlog component.
+    match interface=kl.core.Audit { grant () }
+}
+
+response src=kl.core.Core, dst=traffic_light.KlogEntity { grant () }
+
+request src=traffic_light.KlogStorageEntity, dst=kl.core.Core {
+    // Interface to the Synchronization service.
+    match interface=kl.core.Sync { grant () }
+
+    // Interface to the Virtual Memory Manager (VMM) service.
+    match interface=kl.core.VMM { grant () }
+    // Interface to the Thread service.
+    match interface=kl.core.Thread { grant () }
+    // Interface to the Hal service.
+    match interface=kl.core.HAL, method=DebugWrite { grant () }
+    match interface=kl.core.HAL, method=GetEnv { grant () }
+    // Interface to the HandleManager service.
+    match interface=kl.core.Handle { grant () }
+}
+
+response src=kl.core.Core, dst=traffic_light.KlogStorageEntity { grant () }
+
+policy object audit_specification : Base {}
+
+request src = traffic_light.LightsGPIO, dst = traffic_light.Diagnostics
+{
+    match interface = traffic_light.DiagnosticsMessage, method = SendDiagnosticsMessage {audit_specification.grant()}
+}
+
+response src = traffic_light.Diagnostics, dst = traffic_light.LightsGPIO
+{
+    match interface = traffic_light.DiagnosticsMessage, method = SendDiagnosticsMessage {audit_specification.grant()}
+}
+
+
+// We declare the profile for audit.
+audit profile trace = {
+    // Complete silence.
+    0: {},
+    // Only denied by kss.
+    1: {
+        base: { kss: [ "denied" ] },
+    },
+    // Only denied from everyone.
+    2: {
+        base: { kss: [ "denied" ] },
+        audit_specification: { kss: [ "denied" ] }
+    },
+    // All listening.
+    3: {
+        base: { kss: [ "granted", "denied" ] },
+        audit_specification: { kss: [ "granted", "denied" ] },
+    },
+    // messages where audit_specification is granted
+    4: {
+        base: { kss: [] },
+        audit_specification: { kss: [ "granted", "denied" ] },
+    },
+}
+// We assign the level of the audit profile used by default.
+audit default = trace 4

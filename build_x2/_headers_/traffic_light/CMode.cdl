@@ -1,8 +1,0 @@
-/* Definition of the `Mode` component. */
-
-component traffic_light.CMode
-
-endpoints {
-    /* Declaration of a named implementation of the "Mode" interface. */
-    mode : traffic_light.IMode
-}

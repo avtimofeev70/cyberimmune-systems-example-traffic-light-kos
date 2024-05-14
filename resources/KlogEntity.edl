@@ -1,0 +1,6 @@
+entity traffic_light.KlogEntity
+
+components
+{
+    klog : kl.Klog
+}
