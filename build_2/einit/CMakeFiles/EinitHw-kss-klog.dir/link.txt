@@ -1,0 +1,2 @@
+/opt/KasperskyOS-Community-Edition-1.1.1.40/toolchain/bin/aarch64-kos-ar qc libEinitHw-kss-klog.a CMakeFiles/EinitHw-kss-klog.dir/EinitHw-kss/security.psl.audit.c.o
+/opt/KasperskyOS-Community-Edition-1.1.1.40/toolchain/bin/aarch64-kos-ranlib libEinitHw-kss-klog.a

@@ -17,7 +17,7 @@
  */
 #include <string.h>
 #define NK_USE_UNQUALIFIED_NAMES
-#include <traffic_light/DiagnosticsMessage.idl.h>
+#include <traffic_light/IDiagnosticsMessage.idl.h>
 
 /* Type of interface implementing object. */
 typedef struct IModeImpl {
@@ -80,18 +80,18 @@ typedef struct traffic_light_DiagnosticsMessage_proxy {
 typedef struct transport_data {
     uint32_t idx;
     NkKosTransport transport;
-    DiagnosticsMessage_proxy proxy;
+    IDiagnosticsMessage_proxy proxy;
     char ServiceLocatorName[64];
     char ServiceLocatorRiidName[64];
 	nk_arena reqArena;
 } transport_data;
 
-nk_err_t DiagnosticsMessage_SendDiagnosticsMessage_text(struct traffic_light_DiagnosticsMessage *self,
+nk_err_t DiagnosticsMessage_SendDiagnosticsMessage_text(struct traffic_light_IDiagnosticsMessage *self,
                                                         nk_arena* reqArena,
                                                         char* message_text)
 {
-    DiagnosticsMessage_SendDiagnosticsMessage_req req;
-    DiagnosticsMessage_SendDiagnosticsMessage_res res;
+    IDiagnosticsMessage_SendDiagnosticsMessage_req req;
+    IDiagnosticsMessage_SendDiagnosticsMessage_res res;
 
     nk_arena_reset(reqArena);
 
@@ -104,7 +104,7 @@ nk_err_t DiagnosticsMessage_SendDiagnosticsMessage_text(struct traffic_light_Dia
         return -1;
 
     strncpy(str, message_text, (rtl_size_t)(strlen(message_text) + 1));
-    return DiagnosticsMessage_SendDiagnosticsMessage(self, &req, reqArena, &res, RTL_NULL);    
+    return IDiagnosticsMessage_SendDiagnosticsMessage(self, &req, reqArena, &res, RTL_NULL);    
 }                                                                 
 
 int message_obj(transport_data *obj, char **argv)
@@ -113,7 +113,7 @@ int message_obj(transport_data *obj, char **argv)
 	{
 		obj->idx = 0;
         
-        char reqBufferDiagnostics[DiagnosticsMessage_SendDiagnosticsMessage_req_arena_size];
+        char reqBufferDiagnostics[IDiagnosticsMessage_SendDiagnosticsMessage_req_arena_size];
 		nk_arena reqArena = NK_ARENA_INITIALIZER(reqBufferDiagnostics, reqBufferDiagnostics + sizeof(reqBufferDiagnostics));
         obj->reqArena = reqArena;    
 
@@ -125,7 +125,7 @@ int message_obj(transport_data *obj, char **argv)
 		nk_iid_t riid = ServiceLocatorGetRiid(handleConnect, obj->ServiceLocatorRiidName);
 		assert(riid != INVALID_RIID);
 
-		DiagnosticsMessage_proxy_init(&obj->proxy, &obj->transport.base, riid);
+		IDiagnosticsMessage_proxy_init(&obj->proxy, &obj->transport.base, riid);
         return 1;
 
 	} else if (!strcmp(argv[0], "send")) {
@@ -137,7 +137,7 @@ int message_obj(transport_data *obj, char **argv)
                   "black blinking", "red blinking", "yellow blinking", "red+yellow blinking", 
                   "green blinking", "green+red blinking", "green+yellow blinking", "red+yellow+green blinking"};     
 
-        static char data[traffic_light_DiagnosticsMessage_SendDiagnosticsMessage_req_message_size] = {0};
+        static char data[traffic_light_IDiagnosticsMessage_SendDiagnosticsMessage_req_message_size] = {0};
         if (snprintf(data, sizeof(data),
             "Message #%u: first light -- %s, second light -- %s", ++obj->idx, map_dict[result_code & 0xff], map_dict[result_code>>8]) < 0)
             return -1;

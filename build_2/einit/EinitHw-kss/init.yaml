@@ -1,0 +1,29 @@
+entities:
+
+# The `ControlSystem` entity can call `LightsGPIO`.
+- name: traffic_light.ControlSystem
+  connections:
+  - target: traffic_light.LightsGPIO
+    id: lights_gpio_connection
+
+
+# The `LightsGPIO` entity can only respond to requests.
+- name: traffic_light.LightsGPIO
+  connections:
+  - target: traffic_light.Diagnostics
+    id: diagnostics_connection
+
+
+# The `Diagnostics` entity can only respond to requests.
+- name: traffic_light.Diagnostics
+
+
+- name: traffic_light.KlogEntity
+  path: KlogEntityQemu
+  connections:
+  - target: traffic_light.KlogStorageEntity
+    id: {var: KLOG_STORAGE_SERVER_CONNECTION_ID, include: klog_storage/client.h}
+
+- name: traffic_light.KlogStorageEntity
+
+

@@ -1,0 +1,6 @@
+entity traffic_light.KlogStorageEntity
+
+components
+{
+    klogStorage : kl.KlogStorage
+}

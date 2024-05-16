@@ -1,0 +1,2 @@
+/opt/KasperskyOS-Community-Edition-1.1.1.40/toolchain/bin/aarch64-kos-ar qc libEinitQemu-kss-klog.a CMakeFiles/EinitQemu-kss-klog.dir/EinitQemu-kss/security.psl.audit.c.o
+/opt/KasperskyOS-Community-Edition-1.1.1.40/toolchain/bin/aarch64-kos-ranlib libEinitQemu-kss-klog.a

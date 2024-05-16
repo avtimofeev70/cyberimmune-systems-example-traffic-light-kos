@@ -16,7 +16,7 @@ use EDL traffic_light.ControlSystem
 use EDL traffic_light.LightsGPIO
 use EDL traffic_light.Diagnostics
 
-use audit_policy._
+/* use audit_policy._ */
 
 /* Execution of entities allowed. */
 execute {
