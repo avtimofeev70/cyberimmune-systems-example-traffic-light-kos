@@ -1,4 +1,4 @@
-package traffic_light.IDiagnosticsMessage
+package traffic_light.DiagnosticsMessage
 
 const UInt16 MaxMessageSize = 256;
 

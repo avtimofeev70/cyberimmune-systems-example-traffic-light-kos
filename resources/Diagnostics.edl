@@ -2,5 +2,5 @@ entity traffic_light.Diagnostics
 
 endpoints
 {
-    sendMessage : traffic_light.IDiagnosticsMessage
+    sendMessage : traffic_light.DiagnosticsMessage
 }

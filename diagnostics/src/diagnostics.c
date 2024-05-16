@@ -10,9 +10,9 @@
 
 static nk_err_t DiagnosticsMessageImpl(
                 __rtl_unused struct DiagnosticsMessage         *self,
-                const IDiagnosticsMessage_SendDiagnosticsMessage_req        *req,
+                const DiagnosticsMessage_SendDiagnosticsMessage_req        *req,
                 const struct nk_arena             *reqArena,
-                __rtl_unused IDiagnosticsMessage_SendDiagnosticsMessage_res *res,
+                __rtl_unused DiagnosticsMessage_SendDiagnosticsMessage_res *res,
                 __rtl_unused struct nk_arena      *resArena) {
     nk_uint32_t msgCount = 0;
     nk_ptr_t *messages = nk_arena_get(nk_ptr_t, reqArena, &(req->message), &msgCount);
@@ -30,11 +30,11 @@ static nk_err_t DiagnosticsMessageImpl(
 }
 
 static struct DiagnosticsMessage *CreateIDiagnosticsMessageImpl(void) {
-    static const struct IDiagnosticsMessage_ops Ops = {
+    static const struct DiagnosticsMessage_ops Ops = {
         .SendDiagnosticsMessage = DiagnosticsMessageImpl
     };
 
-    static IDiagnosticsMessage obj = {
+    static DiagnosticsMessage obj = {
         .ops = &Ops
     };
 

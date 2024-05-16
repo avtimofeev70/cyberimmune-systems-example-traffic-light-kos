@@ -1,0 +1,5 @@
+component traffic_light.DiagnosticsMessage
+
+endpoints {
+    dmessage : traffic_light.DiagnosticsMessage
+}
